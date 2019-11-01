@@ -56,13 +56,13 @@ class Network(object):
     nabla_w[-1] =np.dot(delta, activations[-2].transpose())
     for l in range(2, self.num_layers):
       z = zs[-l]
-      sp  sigmoid_prime(z)
-      delta = np.dot(self.weights[-l+1]).transpose(),delta)*sp
+      sp = sigmoid_prime(z)
+      delta = np.dot(self.weights[-l+1].transpose(), delta)*sp
       nabla_b[-l] = delta
       nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())
 
   def evaluate(self, test_data):
-    test_results = [(np.argmax(self.feedforward(x)), y)] for (x, y) in test_data]
+    test_results = [(np.argmax(self.feedforward(x)), y) for (x, y) in test_data]
     return sum(int(x==y) for (x,y) in test_results)
 
   def cost_derivative(self, output_activations, y):
