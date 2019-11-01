@@ -3,4 +3,4 @@ This repository is a neural network to recognise handwritten numbers coded nativ
 
 Coded while learning from the text of Michael Nielsen.  
 [@mnielsen](https://github.com/mnielsen)  
-[Link to book]([https://](http://neuralnetworksanddeeplearning.com/)
+[Link to book](http://neuralnetworksanddeeplearning.com/)
